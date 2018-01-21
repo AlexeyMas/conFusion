@@ -82,13 +82,78 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <a type="button" class="btn btn-warning btn-sm btn-block"
-                       data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                       data-placement="bottom" href="#reserveform">Reserve a Table</a>
+                       data-toggle="modal" data-target="#reserveModal">Reserve a Table</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form">
+                        <div class="form-group row align-items-center">
+                            <label class="col-md-2 col-form-label">Number of Guests</label>
+                            <div class="col-sm-8 col-md-3">
+                                <div class="input-group">
+                                    <label class="radio-inline col-1"><input type="radio" name="optradio">1</label>
+                                    <label class="radio-inline col-1"><input type="radio" name="optradio">2</label>
+                                    <label class="radio-inline col-1"><input type="radio" name="optradio">3</label>
+                                    <label class="radio-inline col-1"><input type="radio" name="optradio">4</label>
+                                    <label class="radio-inline col-1"><input type="radio" name="optradio">5</label>
+                                    <label class="radio-inline col-1"><input type="radio" name="optradio">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                            <label class="col-md-2 col-form-label">Section</label>
+                            <div class="col-sm-8 col-md-3">
+                                <div class="input-group">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                            <label class="col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-sm-8 col-md-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="input" class="form-control" name="date" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-md-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-clock-o"></i>
+                                    </div>
+                                    <input type="input" class="form-control" name="time" placeholder="Time">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -188,57 +253,6 @@
         </div>
     </div>
 
-    <div class="container" id="reserveTableid">
-        <a name="reserveform"></a>
-        <div class="row row-content">
-            <div class="col-sm-12 col-md-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning">Reserve a Table</h3>
-                    <div class="card-block">
-                        <form>
-                            <div class="form-group row">
-                                <label class="col-md-2">Number of Guests</label>
-                                <div>
-                                    <label class="radio-inline col-1"><input type="radio" name="optradio">1</label>
-                                    <label class="radio-inline col-1"><input type="radio" name="optradio">2</label>
-                                    <label class="radio-inline col-1"><input type="radio" name="optradio">3</label>
-                                    <label class="radio-inline col-1"><input type="radio" name="optradio">4</label>
-                                    <label class="radio-inline col-1"><input type="radio" name="optradio">5</label>
-                                    <label class="radio-inline col-1"><input type="radio" name="optradio">6</label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label">Date and Time</label>
-                                <div class="col-sm-8 col-md-3">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input type="input" class="form-control" name="date" placeholder="Date">
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-3">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-clock-o"></i>
-                                        </div>
-                                        <input type="input" class="form-control" name="time" placeholder="Time">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">
-                                        Reserve
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="footer">
         <div class="container">
@@ -287,7 +301,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
+            $().button('toggle')
         });
     </script>
 </body>
