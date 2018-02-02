@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-inverse navbar-toggleable-sm fixed-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="#"> <span class="fa fa-address fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="login-button" target="#loginModal">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -64,7 +64,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-default btn-sm" id="closeLoginBtn">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <a type="button" class="btn btn-warning btn-sm btn-block"
-                       data-toggle="modal" data-target="#reserveModal">Reserve a Table</a>
+                       id="btnReserveModal">Reserve a Table</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="closeReservModal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form class="form">

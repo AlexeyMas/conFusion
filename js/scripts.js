@@ -13,4 +13,21 @@ $(document).ready(function(){
         }
 
     });
+
+    $("#login-button").click(function(){
+        $('#loginModal').modal('show');
+    });
+
+    $("#btnReserveModal").click(function(){
+        $('#reserveModal').modal('show');
+    });
+
+    $("#closeReservModal").click(function(){
+        $('#reserveModal').modal('hide');
+    });
+
+    $("#closeLoginBtn").click(function(){
+        $('#loginModal').modal('hide');
+    });
+
 });
